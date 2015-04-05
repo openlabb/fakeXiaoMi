@@ -10,9 +10,11 @@
 		F534BC441AD0EFEB0002622D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F534BC431AD0EFEB0002622D /* ViewController.m */; };
 		F534BC471AD0F2270002622D /* LeftMidRightLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F534BC461AD0F2270002622D /* LeftMidRightLabelView.m */; };
 		F534BC4B1AD0FAB50002622D /* UILabel+StringFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F534BC4A1AD0FAB50002622D /* UILabel+StringFrame.m */; };
-		F534BC4E1AD10F5F0002622D /* SportsDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F534BC4D1AD10F5F0002622D /* SportsDataView.m */; };
+		F534BC4E1AD10F5F0002622D /* StepDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F534BC4D1AD10F5F0002622D /* StepDataView.m */; };
 		F534BC511AD113650002622D /* 形状-17.png in Resources */ = {isa = PBXBuildFile; fileRef = F534BC4F1AD113650002622D /* 形状-17.png */; };
 		F534BC521AD113650002622D /* 形状-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F534BC501AD113650002622D /* 形状-17@2x.png */; };
+		F575E9291AD18BAE0082B374 /* StepManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F575E9281AD18BAE0082B374 /* StepManager.m */; };
+		F575E92B1AD18BDF0082B374 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F575E92A1AD18BDF0082B374 /* CoreMotion.framework */; };
 		F5772E0F1ACD64330042F1B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5772E0E1ACD64330042F1B5 /* main.m */; };
 		F5772E121ACD64330042F1B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5772E111ACD64330042F1B5 /* AppDelegate.m */; };
 		F5772E181ACD64330042F1B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5772E161ACD64330042F1B5 /* Main.storyboard */; };
@@ -42,10 +44,13 @@
 		F534BC461AD0F2270002622D /* LeftMidRightLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMidRightLabelView.m; sourceTree = "<group>"; };
 		F534BC491AD0FAB50002622D /* UILabel+StringFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StringFrame.h"; sourceTree = "<group>"; };
 		F534BC4A1AD0FAB50002622D /* UILabel+StringFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+StringFrame.m"; sourceTree = "<group>"; };
-		F534BC4C1AD10F5F0002622D /* SportsDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportsDataView.h; sourceTree = "<group>"; };
-		F534BC4D1AD10F5F0002622D /* SportsDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportsDataView.m; sourceTree = "<group>"; };
+		F534BC4C1AD10F5F0002622D /* StepDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepDataView.h; sourceTree = "<group>"; };
+		F534BC4D1AD10F5F0002622D /* StepDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepDataView.m; sourceTree = "<group>"; };
 		F534BC4F1AD113650002622D /* 形状-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状-17.png"; sourceTree = "<group>"; };
 		F534BC501AD113650002622D /* 形状-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状-17@2x.png"; sourceTree = "<group>"; };
+		F575E9271AD18BAE0082B374 /* StepManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepManager.h; sourceTree = "<group>"; };
+		F575E9281AD18BAE0082B374 /* StepManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepManager.m; sourceTree = "<group>"; };
+		F575E92A1AD18BDF0082B374 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F5772E091ACD64330042F1B5 /* fakeXiaoMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fakeXiaoMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5772E0D1ACD64330042F1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5772E0E1ACD64330042F1B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F575E92B1AD18BDF0082B374 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,7 @@
 		F5772E001ACD64330042F1B5 = {
 			isa = PBXGroup;
 			children = (
+				F575E92A1AD18BDF0082B374 /* CoreMotion.framework */,
 				F5772E0B1ACD64330042F1B5 /* fakeXiaoMi */,
 				F5772E251ACD64330042F1B5 /* fakeXiaoMiTests */,
 				F5772E0A1ACD64330042F1B5 /* Products */,
@@ -124,8 +131,10 @@
 				F534BC461AD0F2270002622D /* LeftMidRightLabelView.m */,
 				F534BC491AD0FAB50002622D /* UILabel+StringFrame.h */,
 				F534BC4A1AD0FAB50002622D /* UILabel+StringFrame.m */,
-				F534BC4C1AD10F5F0002622D /* SportsDataView.h */,
-				F534BC4D1AD10F5F0002622D /* SportsDataView.m */,
+				F534BC4C1AD10F5F0002622D /* StepDataView.h */,
+				F534BC4D1AD10F5F0002622D /* StepDataView.m */,
+				F575E9271AD18BAE0082B374 /* StepManager.h */,
+				F575E9281AD18BAE0082B374 /* StepManager.m */,
 			);
 			path = fakeXiaoMi;
 			sourceTree = "<group>";
@@ -260,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F575E9291AD18BAE0082B374 /* StepManager.m in Sources */,
 				F534BC441AD0EFEB0002622D /* ViewController.m in Sources */,
-				F534BC4E1AD10F5F0002622D /* SportsDataView.m in Sources */,
+				F534BC4E1AD10F5F0002622D /* StepDataView.m in Sources */,
 				F5772E411ACE8E400042F1B5 /* CircleHeadView.m in Sources */,
 				F534BC4B1AD0FAB50002622D /* UILabel+StringFrame.m in Sources */,
 				F5772E461ACEA87C0042F1B5 /* ScrollViewController.m in Sources */,
@@ -343,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -378,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

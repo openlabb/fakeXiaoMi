@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SportsDataView.h"
+#import "StepDataView.h"
+#import "StepManager.h"
 typedef enum{
     CircleHeadViewStatusMinHeight = 0,
     CircleHeadViewStatusPulling,
@@ -17,7 +18,7 @@ typedef enum{
 @interface CircleHeadView : UIView
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIImageView *backImageView;
-@property (strong, nonatomic) SportsDataView *sportsDataView;
+@property (strong, nonatomic) StepDataView *sportsDataView;
 @property (assign, nonatomic) CircleHeadViewStatus viewStatus;
-
+@property (strong, nonatomic) StepManager *stepManager;
 @end

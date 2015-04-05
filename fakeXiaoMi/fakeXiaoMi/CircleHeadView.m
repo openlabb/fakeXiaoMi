@@ -23,19 +23,24 @@
         [self addSubview:self.backImageView];
         [self addSubview:self.sportsDataView];
         self.clipsToBounds = YES;
+        
+        [self.stepManager addObserver:self forKeyPath:@"stepsToday" options:(NSKeyValueObservingOptionNew) context:Nil];
+
     }
     return self;
 }
 
-- (SportsDataView *)sportsDataView{
+- (StepDataView *)sportsDataView{
     if (_sportsDataView == nil) {
-        SportsDataView *sV = [[SportsDataView alloc] initWithFrame:CGRectMake(0, 60,  [UIScreen mainScreen].bounds.size.height, 90)];
+        StepDataView *sV = [[StepDataView alloc] initWithFrame:CGRectMake(0, 60,  [UIScreen mainScreen].bounds.size.height, 90)];
         _sportsDataView = sV;
     }
     return _sportsDataView;
 }
 
-
+- (StepManager *)stepManager{
+    return [StepManager sharedInstance];
+}
 
 -(void)willMoveToSuperview:(UIView *)newSuperview
 {
@@ -51,8 +56,18 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    CGPoint newOffset = [change[@"new"] CGPointValue];
-    [self updateWithScrollOffset:newOffset];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([keyPath isEqualToString:@"stepsToday"]) {
+            self.sportsDataView.stepLabel.textMid.text = [NSString stringWithFormat:@"%ld",[change[@"new"] longValue]];
+            self.sportsDataView.distanceLabel.textMid.text = [NSString stringWithFormat:@"%.2f",[change[@"new"] longValue] *0.3/1000];
+
+        }else{
+            CGPoint newOffset = [change[@"new"] CGPointValue];
+            [self updateWithScrollOffset:newOffset];
+        }
+
+    });
+
 }
 
 -(void)updateWithScrollOffset:(CGPoint)newOffset

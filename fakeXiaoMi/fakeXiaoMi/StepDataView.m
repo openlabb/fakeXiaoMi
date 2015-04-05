@@ -2,14 +2,14 @@
 //  SportsDataView.m
 //  fakeXiaoMi
 //
-//  Created by Kakaxi on 15/4/5.
+//  Created by WangJian on 15/4/5.
 //  Copyright (c) 2015年 kkgo. All rights reserved.
 //
 
-#import "SportsDataView.h"
+#import "StepDataView.h"
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-@implementation SportsDataView
+@implementation StepDataView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
